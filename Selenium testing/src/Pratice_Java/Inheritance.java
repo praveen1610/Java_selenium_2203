@@ -21,8 +21,10 @@ public class Inheritance {
 		a objects = new b();
 		objects.add();
 		
+		
 		b objects1 = new b();
 		objects1.sub();
+		
 	}
 
 }
