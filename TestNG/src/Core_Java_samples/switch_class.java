@@ -25,6 +25,10 @@ public static void main (String[] args){
 		System.out.println("Given Input is 2");
 		break;
 	
+	case 3:
+		System.out.println("Given Input is 3");
+		break;
+		
 	default:
 		System.out.println("Default case" +a);
 	}
