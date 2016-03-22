@@ -11,7 +11,7 @@ public class Solarwinds_Button_Chrome {
 	
 	public static void main(String[] args) {
 			// TODO Auto-generated method stub
-		    System.setProperty("webdriver.chrome.driver", "/Users/praveenkumar.jaya/Downloads/chromedriver_win32/chromedriver.exe");
+		    System.setProperty("webdriver.chrome.driver", "C:/selenium-2.50.0/selenium-2.50.0/chromedriver.exe");
 			WebDriver driver = new ChromeDriver();
 			driver.get("http://solarwinds.com");
 			//driver.findElement(By.linkText("RESOLVE NOW")).click();
