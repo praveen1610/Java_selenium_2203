@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [testing]">
+  <parameter name="prametertesting" value="testing"/>
+  <test name="sampletest">
+    <classes>
+      <class name="Sample.DNSreport"/>
+      <class name="Sample.DNS_whois"/>
+      <class name="Sample.DNSLooup_dropdown"/>
+    </classes>
+  </test> <!-- sampletest -->
+  <test name="sampletest(failed)">
+    <classes>
+      <class name="Sample.DNSreport">
+        <methods>
+          <include name="toolspage"/>
+          <include name="Dnsreport"/>
+        </methods>
+      </class> <!-- Sample.DNSreport -->
+    </classes>
+  </test> <!-- sampletest(failed) -->
+</suite> <!-- Failed suite [testing] -->

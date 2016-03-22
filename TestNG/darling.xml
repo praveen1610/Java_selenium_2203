@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name = "something" parallel = "classes" thread-count="2">
+<parameter name = "prametertesting" value = "testing"/>
+<test name = "SampleTest">
+
+
+
+	<classes>
+	
+	<class name ="Sample.Dataprovidersample"></class>
+	<class name ="Sample.addition"></class>
+		<class name ="Sample.NewTest"></class>
+		<class name ="Sample.Parameter"></class>
+		<class name ="Sample.Palindrome"></class>
+	</classes>
+</test>
+
+</suite>
