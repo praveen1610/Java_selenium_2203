@@ -27,3 +27,9 @@ foreach $a(@list)
 {
     print "value of a: $a \n";
 }
+print "--------------------\n";
+#do while
+do{
+    print "inside do loop $a\n";
+    $a++;
+}while($a<18)
