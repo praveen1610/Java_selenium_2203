@@ -1,3 +1,11 @@
 
 .metadata/
 TestNG/test-output/
+
+/**/bin/**/*
+/./**/bin/**/*
+./**/bin/**/*
+**/bin/**/*
+*/bin/**/*
+bin/**/*
+/**/bin/* #and the others with just * at the end too
