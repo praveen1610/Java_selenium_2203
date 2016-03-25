@@ -6,6 +6,8 @@ $inputstring_2 = "praveen,kumar,prema,vetri,vel,jayabalan";
 @array_2 = split(',',$inputstring_2);
 @array_2 = sort(@array_2);
 $size = @array;
+
+#for loop
 for($i=0; $i<$size; $i++)
 {
 print "$array[$i]\n";
