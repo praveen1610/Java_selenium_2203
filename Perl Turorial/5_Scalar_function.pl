@@ -1,6 +1,4 @@
 #!/usr/bin/perl
-
-
 $module = 5%2;
 print "module value is $module\n";
 

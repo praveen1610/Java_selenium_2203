@@ -2,7 +2,8 @@
 
 print "hello world\n";
 
-=for($i=0;$i<3;$i++){
+=same to comment a paragraph
+for($i=0;$i<3;$i++){
 print "inside loop\n";
 }
 =cut  #commenting a para with =.....=cut

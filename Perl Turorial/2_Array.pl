@@ -1,5 +1,4 @@
 #!usr/bin/perl
-
 #Array push n pop
 
 @names = ("test","praveen","kumar");
