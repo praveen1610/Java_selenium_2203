@@ -1,6 +1,5 @@
 #!/usr/bin/perl
 # Display all the files in /tmp directory.
-use package T;
 
 $dir = "c:/*.sys";    #will display all files with extension .sys
 my @files = glob( $dir );
