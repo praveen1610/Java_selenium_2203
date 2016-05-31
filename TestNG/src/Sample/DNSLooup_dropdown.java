@@ -26,7 +26,10 @@ public class DNSLooup_dropdown {
 		
 		FluentWait<WebDriver> waits = new FluentWait<WebDriver>(driver).withTimeout(180,TimeUnit.SECONDS).pollingEvery(5,TimeUnit.SECONDS).ignoring(NoSuchElementException.class);
 		WebElement returnback = (WebElement) waits.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='executionSummary']/div[@id='back']")));
-			
+		
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		WebElement element1 = wait.until(ExpectedConditions.elementToBeClickable(By.id("someid")));
+	
 			
 		String Title = driver.getTitle();
 		String URL = driver.getCurrentUrl();

@@ -8,6 +8,7 @@ public class Palindrome_withoutFunctions {
 		String s1 = input.nextLine();
 		int start = 0;
 		int end = s1.length()-1;
+		System.out.println(end+"\n");
 		int middle = (start+end)/2;
 		int i;
 		for(i=start; i<=middle; i++){
@@ -19,10 +20,10 @@ public class Palindrome_withoutFunctions {
 			}
 		}
 		if(i == middle+1){
-			System.out.println("its palindrome using loop resever " +middle+i);
+			System.out.println("its palindrome using loop resever " +middle+" "+i);
 		}
 		else {	
-			System.out.println("its not palindrome using loop resever " +middle+i);
+			System.out.println("its not palindrome using loop resever " +middle+" "+i);
 		}	
 		
 	}

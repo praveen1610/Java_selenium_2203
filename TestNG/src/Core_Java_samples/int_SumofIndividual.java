@@ -28,7 +28,7 @@ public class int_SumofIndividual {
 		return c;
 	}
 	public static void main(String args[]){
-		int a = 897065;
+		int a = 89706;
 		int b = 56321;
 		int result_int = 0;
 		List<Integer> result_array = new ArrayList<Integer>();

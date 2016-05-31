@@ -14,6 +14,12 @@ public class DNS_whois {
 	@Test
 	public void whoistool(){
 		WebDriver driver = new FirefoxDriver();
+		/*
+		interface
+		reference variable or object
+		class
+		*/
+		
 		driver.get("http://www.dnsstuff.com/tools");
 		driver.manage().window().maximize();  
 		driver.findElement(By.xpath("//input[@id='whois']")).sendKeys("brothersoft.com");

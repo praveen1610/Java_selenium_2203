@@ -12,8 +12,7 @@ public class String_Reversing_Sentence {
 			
 			char[] stringarray = b[i].toCharArray();
 			stringarray[0] = Character.toUpperCase(stringarray[0]);
-			//b[i] = new String(stringarray);
-			b[i]= stringarray.toString();
+			b[i] = new String(stringarray);
 			System.out.print(b[i]+" ");
 
 		}
