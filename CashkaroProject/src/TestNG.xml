@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite1" verbose="1" >
+<parameter name="Browser"  value="firefox"/>
+  <test name="executetestcase" >
+    <classes>
+       <class name="com.cashkaro.testcases.Login_invalidPassword" />
+       <class name="com.cashkaro.testcases.ForgotPassword" />
+       <class name="com.cashkaro.testcases.Signup_WithFacebook_Account" />
+       <class name="com.cashkaro.testcases.Login_WithFacebook_Account" />
+       <class name="com.cashkaro.testcases.Login_WrongCredential"/>
+       <class name="com.cashkaro.testcases.Login_CorrectCredential" />
+       
+       
+    </classes>
+  </test>
+</suite>
+
