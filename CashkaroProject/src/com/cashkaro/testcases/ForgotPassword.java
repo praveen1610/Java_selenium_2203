@@ -1,17 +1,19 @@
 package com.cashkaro.testcases;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import com.cashkaro.pages.ForgotPassword_page;
 import com.cashkaro.pages.Login_Page;
 import Helper.BrowserFactory;
 import Helper.InputValues;
+import Helper.WindowsHelper;
 
 public class ForgotPassword {
 	private WebDriver driver;
+	
 	InputValues textinput = new InputValues("ForgotPassword.properties");
 	
 	@Test
@@ -37,7 +39,17 @@ public class ForgotPassword {
 	@Parameters({ "Browser" })
 	@BeforeMethod
 	 public void beforeTest(String Browser) {
-		String URL	=	textinput.InputValueof("UrlHome");
-	  driver = BrowserFactory.startBrowser(Browser,URL);
+	  String URL	=	textinput.InputValueof("UrlHome");
+	  driver = BrowserFactory.startBrowser("firefox",URL);
 	 }
+	
+	@AfterMethod
+	public void afterTest() throws IOException{
+		String screenhotname 		= textinput.InputValueof("ScreenshotName");
+		WindowsHelper page = new WindowsHelper(driver);
+		page.takeScreenShot(screenhotname);
+		page.closewindow();
+		
+		
+	}
 }

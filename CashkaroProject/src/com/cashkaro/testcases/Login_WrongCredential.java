@@ -1,13 +1,14 @@
 package com.cashkaro.testcases;
 
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import com.cashkaro.pages.Login_Page;
 import Helper.BrowserFactory;
 import Helper.InputValues;
+import Helper.WindowsHelper;
 
 import org.testng.Assert;
 public class Login_WrongCredential {
@@ -37,4 +38,14 @@ public class Login_WrongCredential {
 		  driver = BrowserFactory.startBrowser(Browser,URL);
 		 }
 		 
+	 	@AfterMethod
+			public void afterTest() throws IOException{
+				String screenhotname 		= textinput.InputValueof("ScreenshotName");
+				WindowsHelper page = new WindowsHelper(driver);
+				page.takeScreenShot(screenhotname);
+				page.closewindow();
+				
+				
+			}
+	 	
 	}
