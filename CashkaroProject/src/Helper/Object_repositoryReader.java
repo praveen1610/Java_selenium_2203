@@ -29,16 +29,12 @@ public class Object_repositoryReader {
 		try{
 			
 			File inputfile = new File("c:/Users/praveenkumar.jaya/workspace/CashkaroProject/XpathHelper/"+LocationFileName);
-			//File inputfile = new File("XML_input.xml");
 			DocumentBuilderFactory dbfactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dbuilder = dbfactory.newDocumentBuilder();
 			Doc = dbuilder.parse(inputfile);
 			Doc.getDocumentElement().normalize();
-			
 			xpathtest = XPathFactory.newInstance().newXPath();
 			
-			
-			//return nodeList;
 			}
 		catch (Exception e)
 		{
@@ -56,15 +52,10 @@ public class Object_repositoryReader {
 			Node nNode = nodeList.item(0);
 			if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 				Element elementtest = (Element) nNode;
-				//print = elementtest.getAttribute(Attribute).toString();
-				//print = elementtest.getAttribute("forgotPassword").toString();
-				
-				//attributetest = elementtest.getElementsByTagName("EmailID_TextBox").item(0).getTextContent();
 				attributetest = elementtest.getElementsByTagName(TagName).item(0).getTextContent();
-				//System.out.println(attributetest+ " "+print );
 			}
-		} catch (XPathExpressionException e) {
-			// TODO Auto-generated catch block
+		} 
+		catch (XPathExpressionException e) {
 			e.printStackTrace();
 		}
 		

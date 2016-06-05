@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Xpath>
+<Locator>
 	<facebookemail_login>//input[@id='email']</facebookemail_login>
 	<facebook_password>//input[@id='pass']</facebook_password>
 	<facebook_loginButton>//input[@value='Log In']</facebook_loginButton>
@@ -7,4 +7,4 @@
 	<facebook_ConfirmSubmit>name=__CONFIRM__</facebook_ConfirmSubmit>
 	<JoinNow_HeaderButton>JOIN FREE</JoinNow_HeaderButton>
 
-</Xpath>
+</Locator>

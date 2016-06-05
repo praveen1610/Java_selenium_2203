@@ -4,9 +4,13 @@
   <test name="executetestcase" >
     <classes>
 
-s
+   <class name="com.cashkaro.testcases.Signup_WithFacebook_Account" />
+       <class name="com.cashkaro.testcases.Login_WithFacebook_Account" />
+       <class name="com.cashkaro.testcases.Login_WrongCredential"/>
        <class name="com.cashkaro.testcases.Login_CorrectCredential" />
-       <class name="com.cashkaro.testcases.Login_invalidPassword" />       
+       <class name="com.cashkaro.testcases.Login_invalidPassword" />
+       <class name="com.cashkaro.testcases.ForgotPassword" />
+             
        
        
     </classes>
