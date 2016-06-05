@@ -15,20 +15,20 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 
-public class Object_repositoryReader {
+public class Locator_repositoryReader {
 	
 	XPath xpathtest;
 	Document Doc;
 	public static void main(String[] args){
-		Object_repositoryReader test = new Object_repositoryReader("XML_input.xml");
+		Locator_repositoryReader test = new Locator_repositoryReader("XML_input.xml");
 		String test1 = test.getlocation("SubmitButton");
 		System.out.println(test1);
 		
 	}
-	public Object_repositoryReader (String LocationFileName){
+	public Locator_repositoryReader (String LocationFileName){
 		try{
 			
-			File inputfile = new File("c:/Users/praveenkumar.jaya/workspace/CashkaroProject/XpathHelper/"+LocationFileName);
+			File inputfile = new File("c:/Users/praveenkumar.jaya/workspace/CashkaroProject/LocatorRepository/"+LocationFileName);
 			DocumentBuilderFactory dbfactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dbuilder = dbfactory.newDocumentBuilder();
 			Doc = dbuilder.parse(inputfile);
