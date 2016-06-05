@@ -17,5 +17,6 @@
       <lastname>singn</lastname>
       <nickname>jazz</nickname>
       <marks>90</marks>
+      	<ForgotPassword_popuplink .fl.link />
    </student>
 </class>

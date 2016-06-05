@@ -1,20 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<company>
-    
-	<staff id="1001">
-			<firstname>yong</firstname>
-		<firstname>toung 4</firstname>
-		<lastname>mook kim</lastname>
-		<nickname>mkyong</nickname>
-		<salary>100000</salary>
-	</staff>
-	<staff id="2001">testing
-		<firstname>low</firstname>
-		<firstname>low 2</firstname>
-		<lastname>yin fong</lastname>
-		<nickname>fong fong</nickname>
-		<salary>200000</salary>
-	</staff>
-	<testing>
-	</testing>
-</company>
+<Contacts>
+   <Contact>
+      <ContactId>1</ContactId> 
+      <ContactName>Aditya  Kothari</ContactName>
+      <MobilePhone1>NA</MobilePhone1> 
+      <MobilePhone2>NA</MobilePhone2> 
+      <OfficePhone1>NA</OfficePhone1>
+      <OfficePhone2>NA</OfficePhone2>
+      <OfficePhone3>NA</OfficePhone3>
+      <HomePhone1>999-367-3944</HomePhone1>
+      <HomePhone2>NA</HomePhone2> 
+      <TokenId>mtn</TokenId> 
+   </Contact>
+</Contacts>

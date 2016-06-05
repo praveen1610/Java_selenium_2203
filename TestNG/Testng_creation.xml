@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name = "testing">
-<parameter name = "prametertesting" value = "testing"/>
-<test name = "sampletest">
-<classes>
-<class name = "Sample.DNSreport"></class>
-<class name = "Sample.DNS_whois"></class>
-<class name = "Sample.DNSLooup_dropdown"></class>
+<suite name = "com.cashkaro.testcases">
 
 
-</classes>
-
-</test>
 
 </suite>
