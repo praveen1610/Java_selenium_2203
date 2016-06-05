@@ -4,18 +4,21 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import Helper.Object_repositoryReader;
+
 public class Sign_up_page {
 	
 	WebDriver driver;
-	By facebookemail_login	 = By.xpath("//input[@id='email']");
-	By facebook_password	 = By.xpath("//input[@id='pass']");
-    By facebook_loginButton  = By.xpath("//input[@value='Log In']");
-    By facebook_JoinWith 	 = By.xpath("//a[@id='close_and_go_fb']");
-    By facebook_ConfirmSubmit = By.name("name=__CONFIRM__");
-    By JoinNow_HeaderButton	=	By.linkText("JOIN FREE");
+	Object_repositoryReader Locators = new Object_repositoryReader("sign_up_page.xml");
+	
+	By facebookemail_login	 = By.xpath(Locators.getlocation("facebookemail_login"));
+	By facebook_password	 = By.xpath(Locators.getlocation("facebook_password"));
+    By facebook_loginButton  = By.xpath(Locators.getlocation("facebook_loginButton"));
+    By facebook_JoinWith 	 = By.xpath(Locators.getlocation("facebook_JoinWith"));
+    By facebook_ConfirmSubmit = By.name(Locators.getlocation("facebook_ConfirmSubmit"));
+    By JoinNow_HeaderButton	=	By.linkText(Locators.getlocation("JoinNow_HeaderButton"));
     
     
-  	
     public Sign_up_page(WebDriver driver){
 		this.driver = driver;
 	}

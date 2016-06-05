@@ -5,21 +5,22 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import Helper.Object_repositoryReader;
+
 
 public class Login_Page {
 	WebDriver driver;
+	Object_repositoryReader Locators = new Object_repositoryReader("Login_page.xml");
 	
-	By signin_popup 		 = By.cssSelector(".fl.signin_popupbox");
-	By Login_popupframe	 	 = By.xpath("//div[@id='cboxLoadedContent']/iframe");
-	By Login_username 		 = By.xpath("//input[@id='uname']");
-	By Login_password		 = By.id("pwd-txt");
-	By Login_submitbutton	 = By.xpath("//input[@id='sign_in']");  
-	By MyAccount_button      = By.xpath("//a[contains(text(),'MY ACCOUNT')]");
-	By Login_successname	 = By.cssSelector(".fr.home_login>p");
-	By Errormessage			 = By.id("login_msg");
 
-	
-	
+	By signin_popup 		 = By.cssSelector(Locators.getlocation("signin_popup"));
+	By Login_popupframe	 	 = By.xpath(Locators.getlocation("Login_popupframe"));
+	By Login_username 		 = By.xpath(Locators.getlocation("Login_username"));
+	By Login_password		 = By.id(Locators.getlocation("Login_password"));
+	By Login_submitbutton	 = By.xpath(Locators.getlocation("Login_submitbutton"));  
+	By MyAccount_button      = By.xpath(Locators.getlocation("MyAccount_button"));
+	By Login_successname	 = By.cssSelector(Locators.getlocation("Login_successname"));
+	By Errormessage			 = By.id(Locators.getlocation("Errormessage"));
 	
 	public Login_Page(WebDriver driver){
 		this.driver = driver;

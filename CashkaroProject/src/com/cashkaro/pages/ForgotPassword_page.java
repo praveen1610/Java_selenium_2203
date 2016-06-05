@@ -4,17 +4,19 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import Helper.Object_repositoryReader;
+
 
 public class ForgotPassword_page {
 
 	WebDriver driver;
-		
-	By ForgotPassword_popuplink		 = By.cssSelector(".fl.link");
-	By EmailID_TextBox				 = By.id("from_email");
-	By SubmitButton					 = By.id("submit_req");
-	By SentText						 = By.cssSelector(".f_pass_s>h2");
+	Object_repositoryReader Locators = new Object_repositoryReader("ForgotPassword_page.xml");
 	
 	
+	By ForgotPassword_popuplink		 = By.cssSelector(Locators.getlocation("ForgotPassword_popuplink"));
+	By EmailID_TextBox				 = By.id(Locators.getlocation("EmailID_TextBox"));
+	By SubmitButton					 = By.id(Locators.getlocation("SubmitButton"));
+	By SentText						 = By.cssSelector(Locators.getlocation("SentText"));
 	
 	public ForgotPassword_page(WebDriver driver){
 		this.driver = driver;

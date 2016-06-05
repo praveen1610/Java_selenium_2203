@@ -3,13 +3,10 @@
 <parameter name="Browser"  value="firefox"/>
   <test name="executetestcase" >
     <classes>
-   <class name="com.cashkaro.testcases.Signup_WithFacebook_Account" />
-       <class name="com.cashkaro.testcases.Login_WithFacebook_Account" />
-       <class name="com.cashkaro.testcases.Login_WrongCredential"/>
+
+s
        <class name="com.cashkaro.testcases.Login_CorrectCredential" />
-       <class name="com.cashkaro.testcases.Login_invalidPassword" />
-<class name="com.cashkaro.testcases.ForgotPassword" />
-       
+       <class name="com.cashkaro.testcases.Login_invalidPassword" />       
        
        
     </classes>
