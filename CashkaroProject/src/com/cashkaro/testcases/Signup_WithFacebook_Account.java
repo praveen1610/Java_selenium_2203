@@ -2,7 +2,7 @@ package com.cashkaro.testcases;
 
 import org.testng.annotations.Test;
 import com.cashkaro.pages.Login_Page;
-import com.cashkaro.pages.sign_up_page;
+import com.cashkaro.pages.Sign_up_page;
 import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -19,38 +19,38 @@ InputValues textinput = new InputValues("Signup_WithFacebook_Account.properties"
 
  @Test
   public void facebook_joinfree() {
-	 String FBLoing_ID	=	textinput.InputValueof("FBLoginID");
-	 String FB_Password	=	textinput.InputValueof("FBPassword");
-	 String Expected_HelloMessage = textinput.InputValueof("FBusername");
+	 String FBLoing_ID	=	textinput.inputValueof("FBLoginID");
+	 String FB_Password	=	textinput.inputValueof("FBPassword");
+	 String Expected_HelloMessage = textinput.inputValueof("FBusername");
 	 
-	 sign_up_page signup = new sign_up_page(driver);
+	 Sign_up_page signup = new Sign_up_page(driver);
 	 signup.click_JoinNowButton();
-	 signup.ClickJoinWithFBButton();
-	 signup.Type_loginFacebookcred(FBLoing_ID,FB_Password);
-	 signup.ClickOnLoginButton();
+	 signup.clickJoinWithFBButton();
+	 signup.type_loginFacebookcred(FBLoing_ID,FB_Password);
+	 signup.clickOnLoginButton();
 	 
 	 WindowsHelper page = new WindowsHelper(driver);
 	 String title = page.getPageTile();
 	   if (title.equals("Log in with Facebook"))
 		{
-		 	signup.Click_FBokayButton();
+		 	signup.click_FBokayButton();
 		}
 	 	Login_Page loginsuccess = new Login_Page(driver);
 	 	
-		String Actual_HelloMessage = loginsuccess.Verify_LoginSuccess();
+		String Actual_HelloMessage = loginsuccess.verify_LoginSuccess();
 		Assert.assertEquals(Actual_HelloMessage, Expected_HelloMessage);
  }
  
  @Parameters({ "Browser" })
 	@BeforeMethod
 	 public void beforeTest(String Browser) {
-		String URL	=	textinput.InputValueof("UrlHome");
+		String URL	=	textinput.inputValueof("UrlHome");
 	  driver = BrowserFactory.startBrowser(Browser,URL);
 	 }
  
  @AfterMethod
 	public void afterTest() throws IOException{
-		String screenhotname 		= textinput.InputValueof("ScreenshotName");
+		String screenhotname 		= textinput.inputValueof("ScreenshotName");
 		WindowsHelper page = new WindowsHelper(driver);
 		page.takeScreenShot(screenhotname);
 		page.closewindow();

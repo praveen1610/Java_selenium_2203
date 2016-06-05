@@ -18,29 +18,29 @@ public class Login_WrongCredential {
 		
 		@Test
 		private void checkValidUser(){
-			String Wrong_Username	=	textinput.InputValueof("LoginID_wrong");
-			String Wrong_Password 	= 	textinput.InputValueof("password_wrong");
-			String Expected_ErrorMessage = textinput.InputValueof("ErrorMsg_invalidcred");
+			String Wrong_Username	=	textinput.inputValueof("LoginID_wrong");
+			String Wrong_Password 	= 	textinput.inputValueof("password_wrong");
+			String Expected_ErrorMessage = textinput.inputValueof("ErrorMsg_invalidcred");
 			
 			Login_Page login = new Login_Page(driver);
-			login.Click_siginButton();
-			login.Select_LoginFrame();
+			login.click_siginButton();
+			login.select_LoginFrame();
 			login.Enter_cashkarocred(Wrong_Username,Wrong_Password);
-			login.Click_LoginSubmitButton();
-			String Actual_ErrorMessage = login.Verify_ErrorMessage();
+			login.click_LoginSubmitButton();
+			String Actual_ErrorMessage = login.verify_ErrorMessage();
 			Assert.assertEquals(Actual_ErrorMessage, Expected_ErrorMessage);
 		}
 		
 		@Parameters({ "Browser" })
 		@BeforeMethod
 		 public void beforeTest(String Browser) {
-			String URL	=	textinput.InputValueof("UrlHome");
+			String URL	=	textinput.inputValueof("UrlHome");
 		  driver = BrowserFactory.startBrowser(Browser,URL);
 		 }
 		 
 	 	@AfterMethod
 			public void afterTest() throws IOException{
-				String screenhotname 		= textinput.InputValueof("ScreenshotName");
+				String screenhotname 		= textinput.inputValueof("ScreenshotName");
 				WindowsHelper page = new WindowsHelper(driver);
 				page.takeScreenShot(screenhotname);
 				page.closewindow();

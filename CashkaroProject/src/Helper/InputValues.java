@@ -21,7 +21,7 @@ public class InputValues {
 				}
 	}
 	
-	public String InputValueof(String ElementName){
+	public String inputValueof(String ElementName){
 		 
 				
 				ElementName = prop.getProperty(ElementName);

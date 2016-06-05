@@ -19,15 +19,15 @@ public class ForgotPassword {
 	@Test
 	  public void ForgotPassword_check() {
 		Login_Page login = new Login_Page(driver);
-		login.Click_siginButton();
-		login.Select_LoginFrame();
+		login.click_siginButton();
+		login.select_LoginFrame();
 		
-		String Email_id 		= textinput.InputValueof("Emaild_valid");
-		String Expected_Title	= textinput.InputValueof("Expected_successMsg");	
+		String Email_id 		= textinput.inputValueof("Emaild_valid");
+		String Expected_Title	= textinput.inputValueof("Expected_successMsg");	
 		
 		ForgotPassword_page getNewPassword = new ForgotPassword_page(driver);
 		getNewPassword.clickForgotPasswordLink();
-		getNewPassword.Select_ActiveFrame();
+		getNewPassword.select_ActiveFrame();
 		getNewPassword.enter_emailidForgotPasswordLink(Email_id);
 		getNewPassword.click_SubmitButton();
 		
@@ -39,13 +39,13 @@ public class ForgotPassword {
 	@Parameters({ "Browser" })
 	@BeforeMethod
 	 public void beforeTest(String Browser) {
-	  String URL	=	textinput.InputValueof("UrlHome");
+	  String URL	=	textinput.inputValueof("UrlHome");
 	  driver = BrowserFactory.startBrowser("firefox",URL);
 	 }
 	
 	@AfterMethod
 	public void afterTest() throws IOException{
-		String screenhotname 		= textinput.InputValueof("ScreenshotName");
+		String screenhotname 		= textinput.inputValueof("ScreenshotName");
 		WindowsHelper page = new WindowsHelper(driver);
 		page.takeScreenShot(screenhotname);
 		page.closewindow();

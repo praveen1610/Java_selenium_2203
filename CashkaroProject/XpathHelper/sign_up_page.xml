@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Xpath>
+	<signin_popup>.fl.signin_popupbox</signin_popup>
+	<Login_popupframe>//div[@id='cboxLoadedContent']/iframe</Login_popupframe>
+	<Login_username>//input[@id='uname']</Login_username>
+	<Login_password>pwd-txt</Login_password>
+	<Login_submitbutton>//input[@id='sign_in']</Login_submitbutton>
+	<MyAccount_button>//a[contains(text(),'MY ACCOUNT')]</MyAccount_button>
+	<Login_successname>.fr.home_login>p</Login_successname>
+	<Errormessage>login_msg</Errormessage>
+
+</Xpath>

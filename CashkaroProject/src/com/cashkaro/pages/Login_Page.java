@@ -26,12 +26,12 @@ public class Login_Page {
 	}
 	
 
-	public void Click_siginButton(){
+	public void click_siginButton(){
 		driver.findElement(signin_popup).click(); 
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	}
 	
-	public void Select_LoginFrame(){
+	public void select_LoginFrame(){
 	WebElement login_frame = driver.findElement(Login_popupframe);
 	driver.switchTo().frame(login_frame);
 	}
@@ -41,18 +41,18 @@ public class Login_Page {
 	driver.findElement(Login_password).sendKeys(password);
 	}
 	
-	public void Click_LoginSubmitButton(){
+	public void click_LoginSubmitButton(){
 		driver.findElement(Login_submitbutton).click();	
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
-	public String Verify_LoginSuccess(){
+	public String verify_LoginSuccess(){
 		driver.findElement(MyAccount_button).isDisplayed();
 		String Logged_Username = driver.findElement(Login_successname).getText();
 		return Logged_Username;
 	}
 
-	public String Verify_ErrorMessage(){
+	public String verify_ErrorMessage(){
 		String Errormessage_displayed = driver.findElement(Errormessage).getText();
 		return Errormessage_displayed;
 		

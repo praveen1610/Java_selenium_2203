@@ -25,7 +25,7 @@ public class ForgotPassword_page {
 		driver.findElement(ForgotPassword_popuplink).click();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 	}
-	public void Select_ActiveFrame(){
+	public void select_ActiveFrame(){
 		driver.switchTo().activeElement();
 		}
 	
