@@ -28,7 +28,8 @@ public class Locator_repositoryReader {
 	public Locator_repositoryReader (String LocationFileName){
 		try{
 			
-			File inputfile = new File("c:/Users/praveenkumar.jaya/workspace/CashkaroProject/LocatorRepository/"+LocationFileName);
+			//File inputfile = new File("c:/Users/praveenkumar.jaya/workspace/CashkaroProject/LocatorRepository/"+LocationFileName);
+			File inputfile = new File("./LocatorRepository/"+LocationFileName);
 			DocumentBuilderFactory dbfactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dbuilder = dbfactory.newDocumentBuilder();
 			Doc = dbuilder.parse(inputfile);
