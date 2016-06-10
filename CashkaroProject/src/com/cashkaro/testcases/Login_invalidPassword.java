@@ -15,6 +15,9 @@ import org.testng.Assert;
 public class Login_invalidPassword {
 
 		    private WebDriver driver;
+		    
+			//Input data for test case are got from properties file in resource folder
+			//Properties file is processed through InputValues Class in Helper Package
 			InputValues textinput = new InputValues("Login_invalidPassword.properties");
 			
 			@Test

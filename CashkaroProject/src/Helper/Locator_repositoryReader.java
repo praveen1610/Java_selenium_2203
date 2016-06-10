@@ -17,18 +17,19 @@ import org.w3c.dom.NodeList;
 
 public class Locator_repositoryReader {
 	
-	XPath xpathtest;
-	Document Doc;
+	
 //	public static void main(String[] args){
 //		Locator_repositoryReader test = new Locator_repositoryReader("XML_input.xml");
 //		String test1 = test.getlocation("SubmitButton");
 //		System.out.println(test1);
 //		
 //	}
+	
+	XPath xpathtest;
+	Document Doc;
 	public Locator_repositoryReader (String LocationFileName){
 		try{
 			
-			//File inputfile = new File("c:/Users/praveenkumar.jaya/workspace/CashkaroProject/LocatorRepository/"+LocationFileName);
 			File inputfile = new File("./LocatorRepository/"+LocationFileName);
 			DocumentBuilderFactory dbfactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dbuilder = dbfactory.newDocumentBuilder();

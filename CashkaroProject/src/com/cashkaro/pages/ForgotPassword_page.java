@@ -4,13 +4,16 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import Helper.Object_repositoryReader;
+import Helper.Locator_repositoryReader;
 
 
 public class ForgotPassword_page {
 
 	WebDriver driver;
-	Object_repositoryReader Locators = new Object_repositoryReader("ForgotPassword_page.xml");
+	
+	//All the locations like xpath, id are present in XML file in folder LocationRepository
+	//Locator_repositoryReader Helper class proccess this XML and give the location as string
+	Locator_repositoryReader Locators = new Locator_repositoryReader("ForgotPassword_page.xml");
 	
 	
 	By ForgotPassword_popuplink		 = By.cssSelector(Locators.getlocation("ForgotPassword_popuplink"));

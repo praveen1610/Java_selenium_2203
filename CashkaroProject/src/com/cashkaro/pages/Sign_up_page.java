@@ -4,12 +4,15 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import Helper.Object_repositoryReader;
+import Helper.Locator_repositoryReader;
 
 public class Sign_up_page {
 	
 	WebDriver driver;
-	Object_repositoryReader Locators = new Object_repositoryReader("sign_up_page.xml");
+	
+	//All the locations like xpath, id are present in XML file in folder LocationRepository
+	//Locator_repositoryReader Helper class proccess this XML and give the location as string
+	Locator_repositoryReader Locators = new Locator_repositoryReader("sign_up_page.xml");
 	
 	By facebookemail_login	 = By.xpath(Locators.getlocation("facebookemail_login"));
 	By facebook_password	 = By.xpath(Locators.getlocation("facebook_password"));

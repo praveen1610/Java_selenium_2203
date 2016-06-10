@@ -15,6 +15,9 @@ import org.testng.Assert;
 public class Login_CorrectCredential {
 	
 	private WebDriver driver;
+	
+	//Input data for test case are got from properties file in resource folder
+	//Properties file is processed through InputValues Class in Helper Package
 	InputValues textinput = new InputValues("Login_CorrectCredential.properties");
 	
 	@Test
@@ -22,6 +25,7 @@ public class Login_CorrectCredential {
 		String Password = textinput.inputValueof("Valid_Password");
 		String UserEmail = textinput.inputValueof("Valid_Emailid");
 		String Expected_HelloMessage = textinput.inputValueof("Expected_HelloMessage");
+		
 		Login_Page login = new Login_Page(driver);
 		login.click_siginButton();
 		login.select_LoginFrame();

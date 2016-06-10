@@ -5,12 +5,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import Helper.Object_repositoryReader;
+import Helper.Locator_repositoryReader;
 
 
 public class Login_Page {
 	WebDriver driver;
-	Object_repositoryReader Locators = new Object_repositoryReader("Login_page.xml");
+	
+	//All the locations like xpath, id are present in XML file in folder LocationRepository
+	//Locator_repositoryReader Helper class proccess this XML and give the location as string
+	Locator_repositoryReader Locators = new Locator_repositoryReader("Login_page.xml");
 	
 
 	By signin_popup 		 = By.cssSelector(Locators.getlocation("signin_popup"));

@@ -13,6 +13,9 @@ import Helper.WindowsHelper;
 
 public class Login_WithFacebook_Account {
 	private WebDriver driver;
+	
+	//Input data for test case are got from properties file in resource folder
+	//Properties file is processed through InputValues Class in Helper Package
 	InputValues textinput = new InputValues("Login_WithFacebook_Account.properties");
 
 	 @Test
