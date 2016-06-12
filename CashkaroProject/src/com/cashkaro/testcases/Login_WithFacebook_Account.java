@@ -1,18 +1,23 @@
 package com.cashkaro.testcases;
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.*;
-import com.cashkaro.pages.Login_Page;
-import com.cashkaro.pages.Sign_up_page;
+import com.cashkaro.pages.LoginPage;
+import com.cashkaro.pages.SignUpPage;
 import Helper.BrowserFactory;
 import Helper.InputValues;
 import Helper.WindowsHelper;
 
 public class Login_WithFacebook_Account {
 	private WebDriver driver;
+	String TestcaseName = getClass().getSimpleName().toString();
 	
 	//Input data for test case are got from properties file in resource folder
 	//Properties file is processed through InputValues Class in Helper Package
@@ -24,17 +29,24 @@ public class Login_WithFacebook_Account {
 		 String FB_Password 	=	textinput.inputValueof("FBPassword");
 		 String Expected_HelloMessage = textinput.inputValueof("FBusername");
 		 
-		Login_Page login = new Login_Page(driver);
+		LoginPage login = new LoginPage(driver,TestcaseName);
 			login.click_siginButton();
 			login.select_LoginFrame();
 		
-		Sign_up_page signup = new Sign_up_page(driver);
+		WindowsHelper windows = new WindowsHelper(driver,TestcaseName);
+		windows.SelectActiveFrame();
+		
+		SignUpPage signup = new SignUpPage(driver,TestcaseName);
 			 signup.clickJoinWithFBButton();
 			 signup.type_loginFacebookcred(FB_Login,FB_Password);
-			 signup.click_FBokayButton();
+			 signup.clickOnLoginButton();
+			 if (windows.equals("Log in with Facebook"))
+				{
+				 	signup.click_FBokayButton();
+				}
 			 
 			 String Actual_HelloMessage = login.verify_LoginSuccess();
-			 Assert.assertEquals(Actual_HelloMessage, Expected_HelloMessage);
+			 AssertJUnit.assertEquals(Actual_HelloMessage, Expected_HelloMessage);
 	 }
 	 
 	 @Parameters({ "Browser" })
@@ -47,7 +59,7 @@ public class Login_WithFacebook_Account {
 	 	@AfterMethod
 		public void afterTest() throws IOException{
 			String screenhotname 		= textinput.inputValueof("ScreenshotName");
-			WindowsHelper page = new WindowsHelper(driver);
+			WindowsHelper page = new WindowsHelper(driver,TestcaseName);
 			page.takeScreenShot(screenhotname);
 			page.closewindow();
 			

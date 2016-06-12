@@ -1,11 +1,15 @@
 package com.cashkaro.testcases;
 
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
-import com.cashkaro.pages.Login_Page;
+import com.cashkaro.pages.LoginPage;
 import Helper.BrowserFactory;
 import Helper.InputValues;
 import Helper.WindowsHelper;
@@ -13,7 +17,7 @@ import Helper.WindowsHelper;
 import org.testng.Assert;
 
 public class Login_CorrectCredential {
-	
+	String TestcaseName = getClass().getSimpleName().toString();
 	private WebDriver driver;
 	
 	//Input data for test case are got from properties file in resource folder
@@ -26,13 +30,13 @@ public class Login_CorrectCredential {
 		String UserEmail = textinput.inputValueof("Valid_Emailid");
 		String Expected_HelloMessage = textinput.inputValueof("Expected_HelloMessage");
 		
-		Login_Page login = new Login_Page(driver);
+		LoginPage login = new LoginPage(driver,TestcaseName);
 		login.click_siginButton();
 		login.select_LoginFrame();
 		login.Enter_cashkarocred(UserEmail, Password);
 		login.click_LoginSubmitButton();
 		String Actual_HelloMessage = login.verify_LoginSuccess();
-		Assert.assertEquals(Actual_HelloMessage, Expected_HelloMessage);
+		AssertJUnit.assertEquals(Actual_HelloMessage, Expected_HelloMessage);
 	}
 	
 	@Parameters({ "Browser" })
@@ -45,7 +49,7 @@ public class Login_CorrectCredential {
 	@AfterMethod
 	public void afterTest() throws IOException{
 		String screenhotname 		= textinput.inputValueof("ScreenshotName");
-		WindowsHelper page = new WindowsHelper(driver);
+		WindowsHelper page = new WindowsHelper(driver,TestcaseName);
 		page.takeScreenShot(screenhotname);
 		page.closewindow();
 		

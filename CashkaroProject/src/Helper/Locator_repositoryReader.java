@@ -16,15 +16,6 @@ import org.w3c.dom.NodeList;
 
 
 public class Locator_repositoryReader {
-	
-	
-//	public static void main(String[] args){
-//		Locator_repositoryReader test = new Locator_repositoryReader("XML_input.xml");
-//		String test1 = test.getlocation("SubmitButton");
-//		System.out.println(test1);
-//		
-//	}
-	
 	XPath xpathtest;
 	Document Doc;
 	public Locator_repositoryReader (String LocationFileName){

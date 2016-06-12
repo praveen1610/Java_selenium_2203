@@ -19,6 +19,7 @@ public class BrowserFactory {
 		driver = new ChromeDriver();
 	}
 	else if (browserName.equalsIgnoreCase("IE")){
+		System.setProperty("webdriver.InternetExplorere.driver", "c:/input/chromedriver.exe");
 		driver = new InternetExplorerDriver();
 	}
 		driver.manage().window().maximize();
