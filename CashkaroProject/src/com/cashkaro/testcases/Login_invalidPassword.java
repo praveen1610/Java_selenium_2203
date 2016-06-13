@@ -1,11 +1,15 @@
 package com.cashkaro.testcases;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import com.cashkaro.pages.Login_Page;
+import com.cashkaro.pages.LoginPage;
 import Helper.BrowserFactory;
 import Helper.InputValues;
 import Helper.WindowsHelper;
@@ -14,6 +18,7 @@ import org.testng.Assert;
 
 public class Login_invalidPassword {
 
+			String TestcaseName = getClass().getSimpleName().toString();
 		    private WebDriver driver;
 		    
 			//Input data for test case are got from properties file in resource folder
@@ -25,13 +30,13 @@ public class Login_invalidPassword {
 				String Expected_ErrorMessage = textinput.inputValueof("Errormsg_invalidpassword");
 				String Email_id = textinput.inputValueof("Valid_EmailID");
 				String invalidPassword = textinput.inputValueof("Invalid_Password");
-				Login_Page login = new Login_Page(driver);
+				LoginPage login = new LoginPage(driver,TestcaseName);
 				login.click_siginButton();
 				login.select_LoginFrame();
 				login.Enter_cashkarocred(Email_id,invalidPassword );
 				login.click_LoginSubmitButton();
 				String Actual_ErrorMessage = login.verify_ErrorMessage();
-				Assert.assertEquals(Actual_ErrorMessage, Expected_ErrorMessage);
+				AssertJUnit.assertEquals(Actual_ErrorMessage, Expected_ErrorMessage);
 			}
 			
 			@Parameters({ "Browser" })
@@ -44,7 +49,7 @@ public class Login_invalidPassword {
 			@AfterTest
 			public void afterTest() throws IOException{
 				String screenhotname 		= textinput.inputValueof("ScreenshotName");
-				WindowsHelper page = new WindowsHelper(driver);
+				WindowsHelper page = new WindowsHelper(driver,TestcaseName);
 				page.takeScreenShot(screenhotname);
 				page.closewindow();
 				

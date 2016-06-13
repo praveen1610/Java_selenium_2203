@@ -4,7 +4,7 @@
 	<facebook_password>//input[@id='pass']</facebook_password>
 	<facebook_loginButton>//input[@value='Log In']</facebook_loginButton>
 	<facebook_JoinWith>//a[@id='close_and_go_fb']</facebook_JoinWith>
-	<facebook_ConfirmSubmit>name=__CONFIRM__</facebook_ConfirmSubmit>
+	<facebook_ConfirmSubmit>//*[contains(text(),'OK')]</facebook_ConfirmSubmit>
 	<JoinNow_HeaderButton>JOIN FREE</JoinNow_HeaderButton>
 
 </Locator>
