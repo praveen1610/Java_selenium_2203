@@ -12,7 +12,7 @@ package Core_Java_samples;
 	    {
 	        // TODO Auto-generated method stub
 	        
-	        System.out.println(" Please enter the input string :" );
+	        System.out.println("Please enter the input string :" );
 	        Scanner in = new Scanner (System.in);
 	        String s=in.nextLine();
 	        char c=firstNonRepeatedCharacter(s);

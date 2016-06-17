@@ -1,5 +1,5 @@
 package Pratice_Java;
-//This will be a example for Abstract class
+//This will be a Method overload or Polymorphism
 	public class polymorphiism {
     
 		public void method(){

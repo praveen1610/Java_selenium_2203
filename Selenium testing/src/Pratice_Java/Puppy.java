@@ -34,7 +34,7 @@ should have the same name as the class. A class can have more than one construct
 			System.out.println("Variable Value :"+ myPuppy.puppyAge );
 			Helloworld ob= new Helloworld();
 			ob.second();
-			ob.main(null);
+			//ob.main(null);
 	}
 }
 

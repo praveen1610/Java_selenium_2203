@@ -21,6 +21,7 @@ package Core_Java_samples;
 	    
 	    public static Character firstNonRepeatedCharacter(String str)
 	    {
+	    	
 	        HashMap<Character,Integer>  characterhashtable= new HashMap<Character ,Integer>();
 	        int i,length ;
 	        Character c ;

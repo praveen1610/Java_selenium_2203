@@ -12,24 +12,11 @@ public class Hash_RemoveDuplicateString {
 		
 		for(int i = 0 ; i < s.length(); i++){
 		char c = s.charAt(i);
-		
-		if(character.containsKey(c)){
-			character.put(c, 1);
+
+		if(!character.containsKey(c)){
+			character.put(c,1);
+			System.out.print(c);
+			}
 		}
-		else{
-		character.put(c,1);
-		System.out.print(c);
-		}
-	}
-		
-//		for(int i = 0 ; i < s.length(); i++){
-//			char c = s.charAt(i);
-//			
-//			if(character.get(c) < 2 ){
-//				System.out.print(c);
-//			}
-//		}
-		
-		
- }
+	} 
 }

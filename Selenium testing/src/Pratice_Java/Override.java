@@ -1,5 +1,5 @@
 package Pratice_Java;
-
+//This will be a Method overload or Runtime Polymorphism
 	class Fruit {
 	    
 	    public void show() {
@@ -34,7 +34,8 @@ package Pratice_Java;
 	        // The following WILL NOT work;
 	        // Variables of type Fruit know only
 	        // about Fruit methods.
-	        // banana.makeBananaTree();
+	        // bananas.makeBananaTree(); to make it work we need to do type casting as below
+	        ((Banana) bananas).makeBananaTree(); 
 	    }
 	}
 

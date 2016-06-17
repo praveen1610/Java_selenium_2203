@@ -15,11 +15,11 @@ public class Array_Remove_Duplicate {
 		int[] inputarry = {56,56,56,45,59,54,54,53,54,45};
 		//System.out.println("Input is completed: The given input is:\n");
 		
-		for(int i=0; i<10; i++){
+		for(int i=0; i<inputarry.length; i++){
 	//		System.out.println(inputarry[i]);
 		}
 		System.out.println("output is----------------\n");
-		for(int i=0;i<10;i++){
+		for(int i=0;i<inputarry.length;i++){
 			//System.out.println("Loop for compare start " +inputarry[i]);
 			for(int j=i+1; j<10;j++){
 				if(inputarry[i] ==inputarry[j])
