@@ -50,6 +50,7 @@ public class LoginPage {
 			WebElement login_frame = driver.findElement(Login_popupframe);
 			log.info(TestCaseName+ " Found the Login Frame");
 			driver.switchTo().frame(login_frame);
+			//driver.switchTo().activeElement();
 			log.info(TestCaseName+ " select Login Frame");
 		}
 	catch (Exception e){

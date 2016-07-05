@@ -28,7 +28,7 @@ public class ForgotPasswordPageNew {
 	//public static final String v1 = "from_email";
 	
 	@FindBy(id="from_email") @CacheLookup WebElement EmailID_TextBox;
-	@FindBy(id=v1) @CacheLookup WebElement EmailID_TextBox_1;
+	//@FindBy(id=v1) @CacheLookup WebElement EmailID_TextBox_1;
 	@FindBy(how = How.ID,using="submit_req")@CacheLookup WebElement SubmitButton;
 	@FindBy(how=How.CSS,using = ".f_pass_s>h2")@CacheLookup WebElement SentText;
 	

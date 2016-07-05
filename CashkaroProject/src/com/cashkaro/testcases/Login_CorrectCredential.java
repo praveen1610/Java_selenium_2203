@@ -3,8 +3,6 @@ package com.cashkaro.testcases;
 
 import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
@@ -36,17 +34,17 @@ public class Login_CorrectCredential {
 		login.Enter_cashkarocred(UserEmail, Password);
 		login.click_LoginSubmitButton();
 		String Actual_HelloMessage = login.verify_LoginSuccess();
-		AssertJUnit.assertEquals(Actual_HelloMessage, Expected_HelloMessage);
+		Assert.assertEquals(Actual_HelloMessage, Expected_HelloMessage);
 	}
 	
 	@Parameters({ "Browser" })
-	@BeforeMethod
+	@BeforeTest
 	 public void beforeTest(String Browser) {
 	 String URL	=	textinput.inputValueof("UrlHome");
 	 driver = BrowserFactory.startBrowser(Browser,URL);
 	 }
 
-	@AfterMethod
+	@AfterTest
 	public void afterTest() throws IOException{
 		String screenhotname 		= textinput.inputValueof("ScreenshotName");
 		WindowsHelper page = new WindowsHelper(driver,TestcaseName);

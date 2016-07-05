@@ -50,13 +50,13 @@ public class Login_WithFacebook_Account {
 	 }
 	 
 	 @Parameters({ "Browser" })
-	 @BeforeMethod
+	 @BeforeTest
 		 public void beforeTest(String Browser) {
 			String URL	=	textinput.inputValueof("UrlHome");
 		  driver = BrowserFactory.startBrowser(Browser,URL);
 		 }
 	 
-	 	@AfterMethod
+	 	@AfterTest
 		public void afterTest() throws IOException{
 			String screenhotname 		= textinput.inputValueof("ScreenshotName");
 			WindowsHelper page = new WindowsHelper(driver,TestcaseName);
