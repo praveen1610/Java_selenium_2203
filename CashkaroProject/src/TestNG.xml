@@ -4,11 +4,9 @@
 <parameter name="TESTING" value="printing parameter"/>
   <test name="executetestcase" >
     <classes>
-<class name="com.cashkaro.testcases.TestNgClass1" />
+
+	   <class name="com.cashkaro.testcases.TestNgClass1" />
        <class name="com.cashkaro.testcases.TestNgClass2" />
-       
-             
-       
        
     </classes>
   </test>

@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" verbose="1" >
-<parameter name="Browser"  value="chrome"/>
-  <test name="Test">
+<suite name="Suite" verbose="1" parallel ="tests">
+
+  <test name="Test_IE">
+  <parameter name="Browser"  value="IE"/>
     <classes>
-         <class name="com.cashkaro.testcases.Signup_WithFacebook_Account" />
-       <class name="com.cashkaro.testcases.Login_WithFacebook_Account" />
-       <class name="com.cashkaro.testcases.Login_WrongCredential"/>
-       <class name="com.cashkaro.testcases.Login_CorrectCredential" />
-       <class name="com.cashkaro.testcases.Login_invalidPassword" />
-       <class name="com.cashkaro.testcases.ForgotPassword" />
-      
+         	<class name="com.cashkaro.testcases.Signup_WithFacebook_Account" />
+         	<class name="com.cashkaro.testcases.Login_WithFacebook_Account" />
+ 			<class name="com.cashkaro.testcases.Login_WrongCredential"/>
+ 		  	<class name="com.cashkaro.testcases.Login_CorrectCredential" />
+ 	        <class name="com.cashkaro.testcases.Login_invalidPassword" />
+ 		    <class name="com.cashkaro.testcases.ForgotPassword" />
+        
     </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+  </test> 
+  
+
+  
+
+</suite> 
